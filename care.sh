@@ -2,7 +2,7 @@
 dl() {
 	if [ `which curl` ]; then
 		curl "$1" > "$2"
-	elif
+	elif [ `which wget` ]; then
 		wget "$1" -O "$2"
 	fi
 }
@@ -17,7 +17,7 @@ cp -v bash_profile ~/.bash_profile
 
 mkdir -p /.vim/autoload
 echo "Grabbing vim-plug"
-dl https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim ~/.vim/autoload
+dl https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim ~/.vim/autoload/plug.vim
 
 echo "Grabbing oh-my-zsh"
 git clone https://github.com/telyn/oh-my-zsh.git ~/.oh-my-zsh
