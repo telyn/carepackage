@@ -1,0 +1,9 @@
+---
+- name: Care.
+  hosts: all
+  tasks:
+  - name: Clone carepackage
+    git: dest="{{ ansible_env.HOME }}/carepackage" repo=http://git.aetheria.co.uk/telyn/carepackage.git
+  
+  - name: Care!
+    command: "{{ ansible_env.HOME }}/carepackage/care.sh"
