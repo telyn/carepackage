@@ -1,4 +1,5 @@
-call plug#begin("~/.vim/plugged")
+"some machines will not have git. this is ok
+silent! call plug#begin("~/.vim/plugged")
 
 " utilities
 Plug 'tpope/vim-sensible'
