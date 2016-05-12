@@ -7,6 +7,8 @@ dl() {
 	fi
 }
 
+cd $(dirname "${BASH_SOURCE[0]}")
+
 echo "Copying dotfiles"
 cp -v vimrc ~/.vimrc
 cp -v zshrc ~/.zshrc
