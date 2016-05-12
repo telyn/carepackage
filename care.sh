@@ -15,7 +15,7 @@ cp -v zshrc ~/.zshrc
 cp -v bashrc ~/.bashrc
 cp -v bash_profile ~/.bash_profile
 
-mkdir -p /.vim/autoload
+mkdir -p ~/.vim/autoload
 echo "Grabbing vim-plug"
 dl https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim ~/.vim/autoload/plug.vim
 
