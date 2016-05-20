@@ -25,8 +25,11 @@ call plug#end()
 
 set autochdir
 
-colors molokai
+" make this silent! so that unattended startup works.. hopefully
+silent! colors molokai
 let g:rehash256 = 1
 
+set mouse=a
+set ttymouse=xterm2
 
 command W :w | :GoTest

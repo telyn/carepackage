@@ -2,6 +2,14 @@
 - name: Care.
   hosts: all
   tasks:
+  - name: Ensure vim and git installed
+    apt: name={{ item }} state=present
+    when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
+    become: yes
+    become_user: root
+    with_items:
+    - vim
+    - git
   - name: Clone carepackage
     git: dest="{{ ansible_env.HOME }}/carepackage" repo=http://git.aetheria.co.uk/telyn/carepackage.git
   
