@@ -4,5 +4,6 @@ if [ -z "$1" ]; then
 else 
 	echo "$1" > hosts
 fi
-ansible-playbook -i hosts care.yml
+
+ansible-playbook $2 -i hosts care.yml
 rm hosts

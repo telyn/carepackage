@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 
+# Path to the folder this script is in
+BASHRC_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 # Path to the bash it configuration
-export BASH_IT="$HOME/.bash-it"
+export BASH_IT="$BASHRC_DIR/.bash-it"
 
 # Lock and Load a custom theme file
 # location /.bash_it/themes/
